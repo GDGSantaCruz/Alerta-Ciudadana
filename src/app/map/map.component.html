@@ -1,0 +1,25 @@
+<p>
+  map works!
+</p>
+<agm-map
+  [latitude]="latitude"
+  [longitude]="longitude"
+  [minZoom]="minZoom"
+  [zoom]="zoom">
+
+  <agm-marker
+    *ngFor="let incident of incidents"
+    (markerClick)="clickedMarker(incident)"
+    [latitude]="incident.latitude"
+    [longitude]="incident.longitude"
+    [label]="'I'"
+    [markerDraggable]="false"
+    (dragEnd)="markerDragEnd(incident, $event)">
+    
+  <agm-info-window>
+    <strong>{{incident.title}}</strong>
+    <p>{{incident.description}}</p>
+  </agm-info-window>
+
+</agm-marker>
+</agm-map>

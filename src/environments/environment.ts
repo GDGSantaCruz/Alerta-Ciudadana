@@ -12,5 +12,8 @@ export const environment = {
     projectId: 'alertaciudadana-14474',
     storageBucket: 'alertaciudadana-14474.appspot.com',
     messagingSenderId: '677593323501'
+  },
+  googleMap: {
+    apiKey: 'AIzaSyB-Sqd3BpGC5VAa2v06Qe2KyKx4J38tBa0'
   }
 };
