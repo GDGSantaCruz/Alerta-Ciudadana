@@ -1,13 +1,14 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+<div class='page-title'>
+  <h1 class='mat-display-1'> Welcome to {{ title }}! </h1>
 </div>
-<h2>Denuncias</h2>
-<ul>
-  <li class="text" *ngFor="let denuncia of denuncias | async">
-    {{denuncia.titulo}}
-  </li>
-</ul>
 
+<div [class.mat-elevation-z2]="true" class='list-container'>
+  <mat-list>
+    <h3 mat-subheaders>Denuncias</h3>
+    <mat-list-item *ngFor="let denuncia of denuncias | async">
+      {{denuncia.titulo}}
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
+  <button mat-button color='primary'>Agregar</button>
+</div>
