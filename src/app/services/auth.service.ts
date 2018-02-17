@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
@@ -17,8 +17,7 @@ export class AuthService {
         if (user) {
           this.userDetails = user;
           console.log(this.userDetails);
-        }
-        else {
+        } else {
           this.userDetails = null;
         }
       }
@@ -28,13 +27,13 @@ export class AuthService {
   signInWithFacebook() {
     return this._firebaseAuth.auth.signInWithPopup(
       new firebase.auth.FacebookAuthProvider()
-    )
+    );
   }
 
   signInWithGoogle() {
     return this._firebaseAuth.auth.signInWithPopup(
       new firebase.auth.GoogleAuthProvider()
-    )
+    );
   }
 
   isLoggedIn() {
