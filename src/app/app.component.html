@@ -1,14 +1,3 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+<div>
+    <router-outlet></router-outlet>
 </div>
-<h2>Denuncias</h2>
-<ul>
-  <li class="text" *ngFor="let denuncia of denuncias | async">
-    {{denuncia.titulo}}
-  </li>
-</ul>
-
-<router-outlet></router-outlet>

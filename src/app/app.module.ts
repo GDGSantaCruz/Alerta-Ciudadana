@@ -1,4 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 import { NgModule } from '@angular/core';
 
 import { AppRoutes } from './app.routes';
@@ -26,11 +29,14 @@ import { AuthGuard } from './services/auth-guard.service';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutes,
     AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
-    AngularFireStorageModule // imports firebase/storage only needed for storage features
+    AngularFireStorageModule, // imports firebase/storage only needed for storage features
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
