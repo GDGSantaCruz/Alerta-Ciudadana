@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MapService } from './map.service';
 import { MouseEvent } from '@agm/core';
 
 import { Incident } from './../incident/incident';
