@@ -8,10 +8,10 @@
   [zoom]="zoom">
 
   <agm-marker
-    *ngFor="let incident of incidents"
+    *ngFor="let incident of incidents | async"
     (markerClick)="clickedMarker(incident)"
-    [latitude]="incident.latitude"
-    [longitude]="incident.longitude"
+    [latitude]="incident.geoPoint.latitude"
+    [longitude]="incident.geoPoint.longitude"
     [label]="'I'"
     [markerDraggable]="false"
     (dragEnd)="markerDragEnd(incident, $event)">
