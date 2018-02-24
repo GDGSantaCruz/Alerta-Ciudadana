@@ -19,6 +19,14 @@
   <agm-info-window>
     <strong>{{incident.title}}</strong>
     <p>{{incident.description}}</p>
+    <div>
+      <mat-chip-list class="mat-chip-list-stacked">
+        <mat-chip *ngFor="let label of incident.labels" [color]="primary">
+          {{label}}
+        </mat-chip>
+      </mat-chip-list>
+    </div>
+    
   </agm-info-window>
 
 </agm-marker>
