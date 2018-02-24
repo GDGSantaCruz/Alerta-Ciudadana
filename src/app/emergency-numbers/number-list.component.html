@@ -1,0 +1,7 @@
+<div>
+    <mat-nav-list>
+        <mat-list-item *ngFor="let numberItem of numberList | async">
+                {{ numberItem.number }}
+        </mat-list-item>
+    </mat-nav-list>
+</div>

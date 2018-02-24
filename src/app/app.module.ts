@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
+import {MatButtonModule, MatInputModule, MatListModule} from '@angular/material';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -10,6 +9,7 @@ import { AppRoutes } from './app.routes';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { NumberListComponent } from './emergency-numbers/number-list.component';
 
 import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
@@ -26,7 +26,8 @@ import { AuthGuard } from './services/auth-guard.service';
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    NumberListComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +39,8 @@ import { AuthGuard } from './services/auth-guard.service';
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     AngularFireStorageModule, // imports firebase/storage only needed for storage features
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    MatListModule
   ],
   providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]

@@ -12,16 +12,6 @@ export class AuthService {
 
   constructor(private _firebaseAuth: AngularFireAuth, private router: Router) {
     this.user = _firebaseAuth.authState;
-    this.user.subscribe(
-      (user) => {
-        if (user) {
-          this.userDetails = user;
-          console.log(this.userDetails);
-        } else {
-          this.userDetails = null;
-        }
-      }
-    );
   }
 
   signInWithFacebook() {
@@ -46,14 +36,10 @@ export class AuthService {
   }
 
   isLoggedIn() {
-    if (this.userDetails == null ) {
-      return false;
-    } else {
-      return true;
-    }
+    return this._firebaseAuth.authState.map(user => (user ? true : false));
   }
 
-  logout() {
+  logout(): void {
     this._firebaseAuth.auth.signOut()
       .then((res) => this.router.navigate(['/']));
   }
