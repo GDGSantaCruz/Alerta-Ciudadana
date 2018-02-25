@@ -1,0 +1,8 @@
+agm-map {
+    height: 300px;
+}
+
+mat-chip {
+    max-width: 150px;
+    display: inline-block;
+}
