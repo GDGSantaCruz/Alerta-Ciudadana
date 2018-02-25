@@ -11,10 +11,10 @@ import { IncidentService } from './../incident/incident.service';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
-  latitude: number = -17.774040;
-  longitude: number = -63.180234;
-  zoom: number = 8;
-  minZoom: number = 8;
+  latitude = -17.774040;
+  longitude = -63.180234;
+  zoom = 8;
+  minZoom = 8;
   incidents: Observable<any[]>;
   constructor(private incidentService: IncidentService) {}
 
@@ -26,5 +26,4 @@ export class MapComponent implements OnInit {
   clickedMarker(incident: Incident) {
     console.log(`clicked the marker: ${incident.title}`);
   }
-
 }
