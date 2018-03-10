@@ -1,10 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-.page-title {
-  text-align: center;
-  padding-bottom: 16px;
+/* Normalization of components */
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
-.list-container {
+body {
+  margin: 0;
+  font: 16px sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+li {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+:focus {
+  outline: 0;
+}
+
+/* For every single page */
+.page {
+  display: flex;
+  margin: 16px;
+}
+
+/* If there is just one form in the component */
+.single-form {
   padding: 16px;
+  max-width: 320px;
+}
+
+.form-row {
+  width: 100%;
+}
+
+.single-form-input {
+  width: 100%;
+}
+
+/* utilitaries */
+.center-page {
+  justify-content: center;
+}
+.center {
+  text-align: center;
 }
