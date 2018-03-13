@@ -2,7 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import {MatChipsModule} from '@angular/material/chips';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -47,7 +49,9 @@ import { AuthGuard } from './services/auth-guard.service';
     }),
     MatButtonModule,
     MatInputModule,
-    MatChipsModule
+    MatChipsModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [AuthService, AuthGuard, IncidentService],
   bootstrap: [AppComponent]

@@ -1,7 +1,17 @@
-<div>
-  <a href="" (click)="authService.logout()">Logout</a>
-  <div *ngIf="authService.isLoggedIn()">
-    <h1>hola</h1>
-  </div>
+<div *ngIf="authService.isLoggedIn()">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Alerta Ciudadana</span>
+      <span class="spacer"></span>
+      <button mat-icon-button color="accent">
+        <mat-icon
+          class="icon icon-btn"
+          (click)="authService.logout()"
+        >
+          exit_to_app
+        </mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
   <map></map>
 </div>

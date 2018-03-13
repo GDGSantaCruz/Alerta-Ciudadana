@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
 
 /* Normalization of components */
 html {
@@ -20,6 +20,12 @@ a {
 }
 :focus {
   outline: 0;
+}
+.icon {
+  padding: 0 16px;
+}
+.icon-btn {
+  cursor: pointer;
 }
 
 /* For every single page */
@@ -48,4 +54,7 @@ a {
 }
 .center {
   text-align: center;
+}
+.spacer {
+  flex: 1;
 }
