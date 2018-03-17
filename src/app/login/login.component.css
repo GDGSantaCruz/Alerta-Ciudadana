@@ -1,17 +1,4 @@
-.login-page {
-  margin-top: 24px;
-}
-
-.login-form {
-  padding: 8px;
-  margin: 8px;
-}
-
-.form-input {
+.login-button {
   width: 100%;
-}
-
-.form-button {
-  width: 100%;
-  margin-bottom: 8px;
+  margin: 8px 0;
 }

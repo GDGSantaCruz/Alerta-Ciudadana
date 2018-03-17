@@ -11,15 +11,12 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
   user = {
     email: '',
     password: ''
   };
-
   constructor(private authService: AuthService, private router: Router) {
   }
-
   signInWithFacebook() {
     this.authService.signInWithFacebook()
       .then((res) => {
@@ -27,8 +24,6 @@ export class LoginComponent implements OnInit {
       })
       .catch((err) => console.log(err));
   }
-
-
   signInWithGoogle() {
     this.authService.signInWithGoogle()
       .then((res) => {
@@ -36,19 +31,13 @@ export class LoginComponent implements OnInit {
       })
       .catch((err) => console.log(err));
   }
-
   signInWithEmail() {
     this.authService.signInWithEmail(this.user.email, this.user.password)
       .then((res) => {
         console.log(res);
-
         this.router.navigate(['dashboard']);
       })
       .catch((err) => console.log('error: ' + err));
   }
-
-
-  ngOnInit() {
-  }
-
+  ngOnInit() { }
 }
