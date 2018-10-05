@@ -6,7 +6,7 @@ import { Incident } from './../incident/incident';
 import { IncidentService } from './../incident/incident.service';
 
 @Component({
-  selector: 'map',
+  selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css']
 })

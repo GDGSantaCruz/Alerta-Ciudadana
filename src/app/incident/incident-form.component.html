@@ -1,0 +1,42 @@
+<div>
+  <h2>Registrar incidente</h2>
+  <form class="example-form"  [formGroup]="formDoc">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Titulo del incidente" value="">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Descripcion del incidente"></textarea>
+    </mat-form-field>
+    <div fxLayout='row' class="zero">
+      <div fxFlex="50%">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Latitud" value="">
+        </mat-form-field>
+      </div>
+      <div fxFlex="50%">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Longitud" value="">
+        </mat-form-field>
+      </div>
+    </div>
+    <mat-form-field class="example-full-width">
+        <app-input-file formControlName="photoFile" placeholder="Required input" valuePlaceholder="No file selected" required></app-input-file>
+        <mat-icon matSuffix>folder</mat-icon>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-chip-list #chipList>
+          <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable"
+                   [removable]="removable" (remove)="remove(fruit)">
+            {{fruit.name}}
+            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+          </mat-chip>
+          <input placeholder="New fruit..."
+                 [matChipInputFor]="chipList"
+                 [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                 [matChipInputAddOnBlur]="addOnBlur"
+                 (matChipInputTokenEnd)="add($event)" />
+        </mat-chip-list>
+      </mat-form-field>
+  </form>
+</div>
