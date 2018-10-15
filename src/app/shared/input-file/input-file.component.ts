@@ -1,4 +1,4 @@
-import { Subject } from 'rxjs/Subject';
+import { Subject } from 'rxjs';
 import { Component, OnInit, Input, ElementRef, OnDestroy, HostBinding, Renderer2, HostListener } from '@angular/core';
 import { ControlValueAccessor, NgControl } from '@angular/forms';
 import { MatFormFieldControl } from '@angular/material';
@@ -21,6 +21,7 @@ export class InputFileComponent implements MatFormFieldControl<FileInput>, Contr
   stateChanges = new Subject<void>();
   focused = false;
   controlType = 'file-input';
+  shouldLabelFloat = false;
 
   private _placeholder: string;
   private _required = false;
@@ -98,7 +99,7 @@ export class InputFileComponent implements MatFormFieldControl<FileInput>, Contr
     private fm: FocusMonitor, private _elementRef: ElementRef, private _renderer: Renderer2) {
 
     ngControl.valueAccessor = this;
-    fm.monitor(_elementRef.nativeElement, _renderer, true).subscribe(origin => {
+    fm.monitor(_elementRef.nativeElement, true).subscribe(origin => {
       this.focused = !!origin;
       this.stateChanges.next();
     });

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Incident } from './incident';
-import { AngularFirestore } from 'angularfire2/firestore';
-import { Observable } from 'rxjs/Observable';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class IncidentService {
