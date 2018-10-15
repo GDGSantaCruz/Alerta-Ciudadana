@@ -1,4 +1,4 @@
-<div *ngIf="authService.isLoggedIn()">
+<div *ngIf="authService.isLoggedIn()" class="example-container">
   <mat-toolbar color="primary">
     <mat-toolbar-row>
       <span>Alerta Ciudadana</span>
@@ -13,5 +13,5 @@
       </button>
     </mat-toolbar-row>
   </mat-toolbar>
-  <app-map></app-map>
+  <app-map class="dashboard-map"></app-map>
 </div>

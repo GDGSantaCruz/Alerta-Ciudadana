@@ -2,7 +2,8 @@
   [latitude]="latitude"
   [longitude]="longitude"
   [minZoom]="minZoom"
-  [zoom]="zoom">
+  [zoom]="zoom"
+  style="flex: 1; height: 100% !important;">
 
   <agm-marker
     *ngFor="let incident of incidents | async"
